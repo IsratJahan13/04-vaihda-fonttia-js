@@ -1,0 +1,40 @@
+html {
+    font-size: 62.5%;
+}
+section {
+    background-color: #F2EFEF;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1 {
+    font-size: 4rem;
+}
+p {
+    font-size: 1.6rem;
+    margin: 1rem;
+}
+h2 {
+    font-size: 3rem;
+}
+.lista {
+    list-style: decimal;
+    margin-inline-start: 2rem;
+}
+li {
+    margin: 1rem;
+    font-size: 1.6rem;
+}
+#spanPart {
+    text-align: right;
+}
+.button {
+    padding: 1rem;
+    color: white;
+    background-color: blueviolet;
+    border-style: none;
+    border-radius: .3rem;
+}
