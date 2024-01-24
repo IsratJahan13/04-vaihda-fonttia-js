@@ -1,19 +1,25 @@
-var fontSizes = [20, 24, 28, 32, 16]; // Erilaiset fonttikoot
-        var currentFontSizeIndex = 0; // Nykyisen fonttikoon indeksi
-
-        function changeFontSize() {
-            // Get all list items within the ordered list
-            var listItems = document.getElementById("lista").getElementsByTagName("li");
-
-            // Aseta nykyinen fonttikoko listan alkuarvoksi
-            var currentFontSize = fontSizes[currentFontSizeIndex];
-
-            // Loop through each list item and update the font size
-            for (var i = 0; i < listItems.length; i++) {
-                listItems[i].style.fontSize = currentFontSize + "px";
-            }
-            document.getElementById("text").innerText = " " + currentFontSize + "px";
-            // Siirry seuraavaan fonttikokoon tai aloita alusta jos viimeinen koko saavutettu
-            currentFontSizeIndex = (currentFontSizeIndex + 1) % fontSizes.length;
-        }
-        
+const myListItems = document.querySelectorAll("#lista li");
+const myFontText = document.getElementById("text");
+let currentFontSize = 1.6;
+ 
+function myFunction() {
+  if (currentFontSize === 1.6) {
+    currentFontSize = 2;
+  } else if (currentFontSize === 2) {
+    currentFontSize = 2.4;
+  } else if (currentFontSize === 2.4) {
+    currentFontSize = 2.8;
+  } else if (currentFontSize === 2.8) {
+    currentFontSize = 3.2;
+  } else {
+    currentFontSize = 1.6;
+  }
+ 
+  // fonttikoko pikseleiksi kertomalla 10
+  myFontText.textContent = `${currentFontSize * 10}px`;
+ 
+  // listaelementtien fonttikoon muutos
+  myListItems.forEach((item) => {
+    item.style.fontSize = `${currentFontSize}rem`;
+  });
+}
